@@ -1,0 +1,25 @@
+{
+  "name": "OAuth2-ObjC",
+  "version": "0.1.0",
+  "summary": "A short description of OAuth2-ObjC.",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/OAuth2-ObjC",
+  "license": "MIT",
+  "authors": {
+    "Tom Gallagher": "tom.gallagher@theappengineers.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/OAuth2-ObjC.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "OAuth2-ObjC": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

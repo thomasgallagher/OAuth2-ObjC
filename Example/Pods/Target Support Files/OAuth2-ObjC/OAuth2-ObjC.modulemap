@@ -1,0 +1,6 @@
+framework module OAuth2_ObjC {
+  umbrella header "OAuth2-ObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}

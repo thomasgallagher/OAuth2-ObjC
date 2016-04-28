@@ -1,0 +1,16 @@
+PODS:
+  - OAuth2-ObjC (0.1.0)
+
+DEPENDENCIES:
+  - OAuth2-ObjC (from `../`)
+
+EXTERNAL SOURCES:
+  OAuth2-ObjC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OAuth2-ObjC: 07cee33aa0d6fe6633a504c598ef9f78d92b09e1
+
+PODFILE CHECKSUM: 63dce800b06fdf3eb99ac5432f14d28efce01577
+
+COCOAPODS: 1.0.0.beta.8
