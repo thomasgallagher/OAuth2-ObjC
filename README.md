@@ -1,10 +1,5 @@
 # OAuth2-ObjC
 
-[![CI Status](http://img.shields.io/travis/Tom Gallagher/OAuth2-ObjC.svg?style=flat)](https://travis-ci.org/Tom Gallagher/OAuth2-ObjC)
-[![Version](https://img.shields.io/cocoapods/v/OAuth2-ObjC.svg?style=flat)](http://cocoapods.org/pods/OAuth2-ObjC)
-[![License](https://img.shields.io/cocoapods/l/OAuth2-ObjC.svg?style=flat)](http://cocoapods.org/pods/OAuth2-ObjC)
-[![Platform](https://img.shields.io/cocoapods/p/OAuth2-ObjC.svg?style=flat)](http://cocoapods.org/pods/OAuth2-ObjC)
-
 ![OAuth2](http://oauth.net/images/oauth-2-sm.png "OAuth2")
 
 # OAuth2-ObjC
@@ -26,7 +21,7 @@ OAuth2-ObjC is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "OAuth2-ObjC"
+pod 'OAuth2-ObjC', :git => 'git://github.com/thomasgallagher/OAuth2-ObjC.git'
 ```
 
 ## Configuartion
