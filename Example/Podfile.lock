@@ -1,16 +1,41 @@
 PODS:
-  - OAuth2-ObjC (0.1.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - OAuth2-ObjC (0.1.0):
+    - AFNetworking (~> 3.1)
+    - STKWebKitViewController (~> 0.5)
+  - STKWebKitViewController (0.5.0)
 
 DEPENDENCIES:
-  - OAuth2-ObjC (from `../`)
+  - OAuth2-ObjC (from `git://github.com/thomasgallagher/OAuth2-ObjC.git`)
 
 EXTERNAL SOURCES:
   OAuth2-ObjC:
-    :path: "../"
+    :git: git://github.com/thomasgallagher/OAuth2-ObjC.git
+
+CHECKOUT OPTIONS:
+  OAuth2-ObjC:
+    :commit: da2c9cc013e9b7f8392756fdfa70e9fa78bcf732
+    :git: git://github.com/thomasgallagher/OAuth2-ObjC.git
 
 SPEC CHECKSUMS:
-  OAuth2-ObjC: 07cee33aa0d6fe6633a504c598ef9f78d92b09e1
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  OAuth2-ObjC: eb06fef2d282ea4b6f9b9b8ce779f165a1fe4783
+  STKWebKitViewController: 1371f39e5f697de11aa091064eeed6eb515a2511
 
-PODFILE CHECKSUM: 63dce800b06fdf3eb99ac5432f14d28efce01577
+PODFILE CHECKSUM: 2187139e37e09bd4f354bc75fd6736b47515e68a
 
 COCOAPODS: 1.0.0.beta.8

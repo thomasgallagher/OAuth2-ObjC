@@ -1,0 +1,6 @@
+framework module STKWebKitViewController {
+  umbrella header "STKWebKitViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

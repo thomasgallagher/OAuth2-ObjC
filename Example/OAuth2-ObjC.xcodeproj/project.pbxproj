@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B5D86AB1CD24F2E00C2337E /* OAuth2Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D86AA1CD24F2E00C2337E /* OAuth2Credentials.plist */; };
+		4B5D86B01CD24FA000C2337E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D86AD1CD24FA000C2337E /* AppDelegate.m */; };
+		4B5D86B11CD24FA000C2337E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D86AF1CD24FA000C2337E /* ViewController.m */; };
+		4B5D86B31CD250AF00C2337E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D86B21CD250AF00C2337E /* LaunchScreen.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* TGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* TGAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* TGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* TGViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -38,6 +40,12 @@
 /* Begin PBXFileReference section */
 		11625A80AE37182FA4C4600B /* Pods_OAuth2_ObjC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAuth2_ObjC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EC607EFEC9243B0F0B5EFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4B5D86AA1CD24F2E00C2337E /* OAuth2Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OAuth2Credentials.plist; sourceTree = "<group>"; };
+		4B5D86AC1CD24FA000C2337E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B5D86AD1CD24FA000C2337E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4B5D86AE1CD24FA000C2337E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4B5D86AF1CD24FA000C2337E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4B5D86B21CD250AF00C2337E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB80EA09713444E55A05971 /* Pods-OAuth2-ObjC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuth2-ObjC_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OAuth2-ObjC_Example/Pods-OAuth2-ObjC_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* OAuth2-ObjC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth2-ObjC_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,10 +55,6 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* OAuth2-ObjC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuth2-ObjC-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* TGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* TGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* TGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* TGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* OAuth2-ObjC_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OAuth2-ObjC_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,11 +134,13 @@
 		6003F593195388D20070C39A /* Example for OAuth2-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* TGAppDelegate.h */,
-				6003F59D195388D20070C39A /* TGAppDelegate.m */,
+				4B5D86B21CD250AF00C2337E /* LaunchScreen.storyboard */,
+				4B5D86AC1CD24FA000C2337E /* AppDelegate.h */,
+				4B5D86AD1CD24FA000C2337E /* AppDelegate.m */,
+				4B5D86AE1CD24FA000C2337E /* ViewController.h */,
+				4B5D86AF1CD24FA000C2337E /* ViewController.m */,
+				4B5D86AA1CD24F2E00C2337E /* OAuth2Credentials.plist */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* TGViewController.h */,
-				6003F5A6195388D20070C39A /* TGViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -278,6 +284,8 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				4B5D86AB1CD24F2E00C2337E /* OAuth2Credentials.plist in Resources */,
+				4B5D86B31CD250AF00C2337E /* LaunchScreen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,9 +398,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* TGAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* TGViewController.m in Sources */,
+				4B5D86B01CD24FA000C2337E /* AppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4B5D86B11CD24FA000C2337E /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -516,6 +524,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAuth2-ObjC/OAuth2-ObjC-Prefix.pch";
 				INFOPLIST_FILE = "OAuth2-ObjC/OAuth2-ObjC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +541,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAuth2-ObjC/OAuth2-ObjC-Prefix.pch";
 				INFOPLIST_FILE = "OAuth2-ObjC/OAuth2-ObjC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

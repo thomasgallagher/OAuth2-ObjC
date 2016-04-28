@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="wQg-tq-qST">
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="TGViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eik-Cc-kcK" userLabel="Button">
+                                <rect key="frame" x="233" y="285" width="135" height="30"/>
+                                <state key="normal" title="Sign in with OAuth2"/>
+                                <connections>
+                                    <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1RO-eb-EaM"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKn-aI-ue0">
+                                <rect key="frame" x="274" y="323" width="53" height="30"/>
+                                <state key="normal" title="Call API"/>
+                                <connections>
+                                    <action selector="callApiTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwa-y0-J0d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GKn-aI-ue0" firstAttribute="centerX" secondItem="Eik-Cc-kcK" secondAttribute="centerX" id="EaZ-vY-LwN"/>
+                            <constraint firstItem="Eik-Cc-kcK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iyo-rS-NjB"/>
+                            <constraint firstItem="GKn-aI-ue0" firstAttribute="top" secondItem="Eik-Cc-kcK" secondAttribute="bottom" constant="8" symbolic="YES" id="QbL-22-Aie"/>
+                            <constraint firstItem="Eik-Cc-kcK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="itA-40-88h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authButton" destination="Eik-Cc-kcK" id="dYa-FF-46u"/>
+                        <outlet property="callApiButton" destination="GKn-aI-ue0" id="rMx-zw-2of"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
         </scene>
     </scenes>
 </document>

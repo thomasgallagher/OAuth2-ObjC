@@ -2,11 +2,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'OAuth2-ObjC_Example' do
-  pod 'OAuth2-ObjC', :path => '../'
+  pod 'OAuth2-ObjC', :git => 'git://github.com/thomasgallagher/OAuth2-ObjC.git'
 
   target 'OAuth2-ObjC_Tests' do
     inherit! :search_paths
-
-    
   end
 end
