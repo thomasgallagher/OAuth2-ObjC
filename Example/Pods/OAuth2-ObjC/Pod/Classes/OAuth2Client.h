@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "STKWebKitViewController.h"
+@import STKWebKitViewController;
 
 #define kOAuth2CodeReceivedNotification @"OAuth2CodeReceivedNotification"
 #define kOAuth2SignedInNotification @"OAuth2SignedInNotification"

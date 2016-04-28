@@ -1,13 +1,7 @@
 # OAuth2-ObjC
 
-[![CI Status](http://img.shields.io/travis/Tom Gallagher/OAuth2-ObjC.svg?style=flat)](https://travis-ci.org/Tom Gallagher/OAuth2-ObjC)
-[![Version](https://img.shields.io/cocoapods/v/OAuth2-ObjC.svg?style=flat)](http://cocoapods.org/pods/OAuth2-ObjC)
-[![License](https://img.shields.io/cocoapods/l/OAuth2-ObjC.svg?style=flat)](http://cocoapods.org/pods/OAuth2-ObjC)
-[![Platform](https://img.shields.io/cocoapods/p/OAuth2-ObjC.svg?style=flat)](http://cocoapods.org/pods/OAuth2-ObjC)
-
 ![OAuth2](http://oauth.net/images/oauth-2-sm.png "OAuth2")
 
-# OAuth2-ObjC
 Simple lightweight OAuth2 client for iOS 9 and above.
 
 ## Introduction
@@ -22,19 +16,21 @@ Simple lightweight OAuth2 client for iOS 9 and above.
 
 ## Installation
 
-OAuth2-ObjC is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+OAuth2-ObjC is available through [CocoaPods](http://cocoapods.org).
+
+To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "OAuth2-ObjC"
+pod 'OAuth2-ObjC', :git => 'git://github.com/thomasgallagher/OAuth2-ObjC.git'
 ```
 
 ## Configuartion
 
-1. If you do not already have one, [create a custom URL scheme](https://dev.twitter.com/cards/mobile/url-schemes) for your app and make a note of it - this is required in order to capture redirects back into your app from your OAuth2 server.
-2. Create a OAuth2ClientCredentials.plist file and fill it with your OAuth2 credentials - an example is provided in the prject root.
-3. Add `#import "OAuth2Client.h"` to the top of your `AppDelegate.m`
-4. Add the following method your your `AppDelegate.m` - it caputures redirects back into your app and forwards the server code to the library which subsequently exchanges it for an access token.
+1. If you do not already have one, [create a custom URL scheme](https://dev.twitter.com/cards/mobile/url-schemes) for your app and make a note of it - required to capture redirects back into your app from your OAuth2 server.
+2. Add `LSApplicationQueriesSchemes` as an array to your `Info.plist`, then add your custom scheme name as the first item (without the :// suffix) as an entry - gives permission to the WKWebView to handle the re-direction back to your app.
+3. Create a OAuth2ClientCredentials.plist file and fill it with your OAuth2 credentials - a sample version is provided in the example project.
+4. Add `#import "OAuth2Client.h"` to the top of your `AppDelegate.m`
+5. Add the following method your your `AppDelegate.m` - caputures auth redirects back into your app from your OAuth2 server and forwards the server code to the library which subsequently exchanges it for an access token.
 
 ```
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -45,12 +41,22 @@ pod "OAuth2-ObjC"
 
 ## Usage
 
-1. Add `#import "OAuth2Client.h"` to the ViewController in your project that you want to sign in from.
-2. Call `[[OAuth2Client sharedInstance] authenticateInViewController:self];` from the ViewController you want to sign in from - a modal browser will show and begin the OAuth2 sign in process.
+1. Add `#import "OAuth2Client.h"` to the ViewController in your project that you want to auth from.
+2. Call `[[OAuth2Client sharedInstance] authenticateInViewController:self];` - a modal browser will show and begin the OAuth2 auth process.
 3. When the user is returned - the library will fire a `kOAuth2SignedInNotification` notification.
-4. You can use `[[OAuth2Client sharedInstance] accessToken]` to get your latest access token.
 
-Note: If your server sent a refresh token this method will automatically refresh expired access tokens with no extra work.
+## Access token
+You can use your access token from anywhere in your app - if your server sent a refresh token then this method will automatically refresh your expired access token with no extra work.
+
+```
+[[OAuth2Client sharedInstance] accessToken:^(NSString *accessToken) {
+    if (accessToken != nil) {
+        // Make your API call here using AF Networking 3.0
+    } else {
+        NSLog(@"API: Error: Access token is nil.");
+    }
+}];
+```
 
 ## Signed in state
 
@@ -63,10 +69,6 @@ Use `[[OAuth2Client sharedInstance] signOut];` to sign out - a `kOAuth2SignedOut
 ## Further development
 
 Please submit issues and PRs for feature requests.
-
-## Author
-
-Tom Gallagher, tom.gallagher@theappengineers.com
 
 ## License
 

@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   OAuth2-ObjC:
-    :commit: da2c9cc013e9b7f8392756fdfa70e9fa78bcf732
+    :commit: d711eb5644e0ddf7f57971c1c984246fa138046f
     :git: git://github.com/thomasgallagher/OAuth2-ObjC.git
 
 SPEC CHECKSUMS:
