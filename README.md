@@ -2,7 +2,6 @@
 
 ![OAuth2](http://oauth.net/images/oauth-2-sm.png "OAuth2")
 
-# OAuth2-ObjC
 Simple lightweight OAuth2 client for iOS 9 and above.
 
 ## Introduction
@@ -17,8 +16,9 @@ Simple lightweight OAuth2 client for iOS 9 and above.
 
 ## Installation
 
-OAuth2-ObjC is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+OAuth2-ObjC is available through [CocoaPods](http://cocoapods.org).
+
+To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'OAuth2-ObjC', :git => 'git://github.com/thomasgallagher/OAuth2-ObjC.git'
@@ -26,11 +26,11 @@ pod 'OAuth2-ObjC', :git => 'git://github.com/thomasgallagher/OAuth2-ObjC.git'
 
 ## Configuartion
 
-1. If you do not already have one, [create a custom URL scheme](https://dev.twitter.com/cards/mobile/url-schemes) for your app and make a note of it - this is required in order to capture redirects back into your app from your OAuth2 server.
-2. Add `LSApplicationQueriesSchemes` as an array to your `Info.plist` - then add your custom scheme name as the first item (without the :// suffix) as an entry - this gives permission to the web view to handle the redirection back into your app.
-3. Create a OAuth2ClientCredentials.plist file and fill it with your OAuth2 credentials - an sample is provided in the example project.
+1. If you do not already have one, [create a custom URL scheme](https://dev.twitter.com/cards/mobile/url-schemes) for your app and make a note of it - required to capture redirects back into your app from your OAuth2 server.
+2. Add `LSApplicationQueriesSchemes` as an array to your `Info.plist`, then add your custom scheme name as the first item (without the :// suffix) as an entry - gives permission to the WKWebView to handle the re-direction back to your app.
+3. Create a OAuth2ClientCredentials.plist file and fill it with your OAuth2 credentials - a sample version is provided in the example project.
 4. Add `#import "OAuth2Client.h"` to the top of your `AppDelegate.m`
-5. Add the following method your your `AppDelegate.m` - it caputures redirects back into your app and forwards the server code to the library which subsequently exchanges it for an access token.
+5. Add the following method your your `AppDelegate.m` - caputures auth redirects back into your app from your OAuth2 server and forwards the server code to the library which subsequently exchanges it for an access token.
 
 ```
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -41,8 +41,8 @@ pod 'OAuth2-ObjC', :git => 'git://github.com/thomasgallagher/OAuth2-ObjC.git'
 
 ## Usage
 
-1. Add `#import "OAuth2Client.h"` to the ViewController in your project that you want to sign in from.
-2. Call `[[OAuth2Client sharedInstance] authenticateInViewController:self];` from the ViewController you want to sign in from - a modal browser will show and begin the OAuth2 sign in process.
+1. Add `#import "OAuth2Client.h"` to the ViewController in your project that you want to auth from.
+2. Call `[[OAuth2Client sharedInstance] authenticateInViewController:self];` - a modal browser will show and begin the OAuth2 auth process.
 3. When the user is returned - the library will fire a `kOAuth2SignedInNotification` notification.
 
 ## Access token
