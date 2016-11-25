@@ -7,7 +7,7 @@ Simple lightweight OAuth2 client for iOS 9 and above.
 ## Introduction
 
 - Written in Objective-C and available as a CocoaPod.
-- Built with [AFNetowrking 3.1](https://github.com/AFNetworking/AFNetworking)
+- Built with [AFNetworking 3.1](https://github.com/AFNetworking/AFNetworking)
 - Simple .plist configuration.
 - Uses a `WKWebView` (via [STKWebKitViewController](https://github.com/sticksen/STKWebKitViewController)) to avoid app switching whilst authenticating.
 - Securely persists tokens to `NSUserDefaults`.
